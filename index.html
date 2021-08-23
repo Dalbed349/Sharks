@@ -3,46 +3,24 @@
 
 <head>
     <title>Shark Project -- Yearly New Discoveries</title>
-    <!-- Load D3 from unpkg-->
     <script src="https://unpkg.com/d3@7.0.1/dist/d3.min.js"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
 </head>
-<script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 <body>
+
     <h1>Yearly New Discoveries</h1>
-    <svg></svg>
     <pre id="message"></pre>
-    <script>
-        d3.csv("https://raw.githubusercontent.com/Dalbed349/Sharks/master/SHARKPROJECT.csv")
-            .then(data => {
-                let message = '';
-                console.log(data)
-                message = message + Math.round(d3.csvFormat(data).length / 1024) + 'kB\n';
-                message = message + data.length + ' rows\n';
-                message = message + data.columns.length + ' columns';
-                document.getElementById('message').textContent = message;
-
-                $("#ex1").html(JSON.stringify(data, null, 3));
-            }
-            )
-
-    </script>
-
+    <textarea id="ex1" rows="15" cols="90"></textarea>
+    <svg width="1960" height="1000"></svg>
 </body>
-<textarea id="ex1" rows="15" cols="90"></textarea>
 
 </html>
 <style>
-    #message {
-        font-size: 3em;
-    }
-
-    #ex1 {
-        font-size: 3em;
-    }
-
     * {
-        margin-top: 10px;
+        margin - top: 10px;
         margin-left: 10px;
+        font-size: 1em;
     }
 </style>

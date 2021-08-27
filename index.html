@@ -6,21 +6,88 @@
     <script src="https://unpkg.com/d3@7.0.1/dist/d3.min.js"></script>
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="main.js"></script>
+    <script language="javascript" type="text/javascript" src="main2.js"></script>
 </head>
 
 <body>
-
-    <h1>Yearly New Discoveries</h1>
+    <div id="left"> left </div>
+    <div id="right"> right </div>
+    <h1>1. Yearly New Discoveries</h1>
+    <h2>White and Last 2012 A review of the taxonomy of chondrichthyan fishes_ a modern perspective</h2>
     <pre id="message"></pre>
-    <textarea id="ex1" rows="15" cols="90"></textarea>
-    <svg width="1960" height="1000"></svg>
+    <div id="container">
+        <div id="data1description">
+            <textarea id="ex1" rows="35" cols="35"></textarea>
+        </div>
+        <div id="chart"></div>
+    </div>
+    <div id="break">
+        <h1>2. White, Will (NCMI, Hobart) -William.White@csiro.au-</h1>
+        <h2>Sharks and Rays since 1980</h2>
+    </div>
+    <pre id="message2"></pre>
+    <div>
+        <textarea id="ex2" rows="15" cols="90"></textarea>
+    </div>
 </body>
 
 </html>
 <style>
     * {
-        margin - top: 10px;
-        margin-left: 10px;
-        font-size: 1em;
+
+        margin-left: 15px;
+        margin-right: 15px;
+
+
+    }
+
+    #break {
+        height: 100px;
+        width: 100%;
+        display: inline-block;
+
+    }
+
+    /* #data1description {
+        width: 200px;
+        float: left;
+    } */
+
+    #ex1 {
+        width: 180px;
+        float: left;
+
+    }
+
+    #container {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #chart {
+        display: flex;
+        width: 50%;
+        height: 50%;
+
+    }
+
+    /* /// */
+    #left {
+        float: left;
+        width: 180px;
+    }
+
+    #right {
+        margin-left: 180px;
+    }
+
+    #left {
+        background-color: pink;
+    }
+
+    #right {
+        background-color: lightgreen;
     }
 </style>
